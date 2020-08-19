@@ -105,21 +105,21 @@
   </head>
   <body>
     <button id="button" onclick="toggleStartStop()">
-      &#x23fa; Click to Speak (Only works in Google Chrome for Desktop)
+      &#x23fa; 音声認識ON (デスクトップ用Google Chromeでのみ機能)
     </button>
     <button
       id="copy"
       onclick="clipboardCopy()"
       style="color: black; background-color: white;"
     >
-      &#x1f5d2; Click to Copy Voice Text to Clipboard
+      &#x1f5d2; 音声テキストのクリップボードコピー
     </button>
     <ul id="messages"></ul>
     <form action="">
       <input
         id="m"
         autocomplete="off"
-        placeholder="Press enter key to send your message"
+        placeholder="Enterキーを押してメッセージを送信する"
       />
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
@@ -308,7 +308,7 @@
       function reset() {
         recognizing = false;
         button.innerHTML =
-          "&#x23fa; Click to Speak (Only works in Google Chrome for Desktop)";
+          "&#x23fa; 音声認識ON (デスクトップ用Google Chromeでのみ機能)";
         button.setAttribute("style", "color:black;background-color:white;");
         button.removeAttribute("class", "rec");
       }
@@ -321,7 +321,7 @@
           recognition.start();
           recognizing = true;
           button.innerHTML =
-            "&#x23f9; Click to Stop (Only works in Google Chrome for Desktop)";
+            "&#x23f9; 音声認識OFF (デスクトップ用Google Chromeでのみ機能)";
           button.setAttribute("style", "color:white;background-color:red;");
           button.setAttribute("class", "rec");
         }
